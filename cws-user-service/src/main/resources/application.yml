@@ -1,0 +1,20 @@
+logging:
+  file:
+    name: './logs/users2.log' #file inserito nella cartella logs
+    #path: "/logs"
+  pattern:
+    file: "%d{ dd-MM-yyyy } [%thread] %-5level %logger{36} - %msg%n"
+    #console: "%d{dd-MM-yyyy HH:mm:ss} - %msg%n"
+
+  # Livello del Log generale (default INFO)
+  level:
+    root: INFO
+    # Livello di log specifico
+    org.springframework.security: DEBUG
+    org.hibernate: INFO
+    org.springframework.web: INFO
+    it.cws.meta.cwsuserservices.web: INFO
+    it.cws.meta.cwsuserservices.services: DEBUG
+  logback:
+    rollingpolicy:
+      max-file-size: 1MB
